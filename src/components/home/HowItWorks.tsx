@@ -1,4 +1,4 @@
-import { processSteps } from "@/lib/site";
+import { processGroups } from "@/lib/site";
 
 export function HowItWorks() {
   return (
@@ -16,26 +16,47 @@ export function HowItWorks() {
             id="process-heading"
             className="mt-4 font-serif text-4xl tracking-tight sm:text-5xl"
           >
-            A short brief, then the work.
+            A clear process for each service.
           </h2>
           <p className="mt-5 text-base leading-8 text-muted">
-            There is no long onboarding sequence and no extra product layer.
-            You choose a service, agree the scope, and complete the
-            deliverables inside that frame.
+            Each service follows its own process, shaped around the work you
+            need and the outcomes you want to measure.
           </p>
         </div>
 
-        <ol className="mt-14 grid gap-px bg-border sm:grid-cols-2">
-          {processSteps.map((step) => (
-            <li key={step.number} className="bg-background p-7 sm:p-9">
-              <span className="font-serif text-3xl text-pine">
-                {step.number}
-              </span>
-              <h3 className="mt-5 font-serif text-2xl">{step.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-muted">{step.body}</p>
-            </li>
+        <div className="mt-14 space-y-12">
+          {processGroups.map((group) => (
+            <div key={group.title}>
+              <div className="max-w-2xl">
+                <h3 className="font-serif text-3xl tracking-tight">
+                  {group.title}
+                </h3>
+                <p className="mt-3 text-sm leading-7 text-muted">
+                  {group.description}
+                </p>
+              </div>
+
+              <ol className="mt-6 grid gap-px bg-border sm:grid-cols-2">
+                {group.steps.map((step) => (
+                  <li
+                    key={step.number}
+                    className="bg-background p-7 sm:p-9"
+                  >
+                    <span className="font-serif text-3xl text-pine">
+                      {step.number}
+                    </span>
+                    <h4 className="mt-5 font-serif text-2xl">
+                      {step.title}
+                    </h4>
+                    <p className="mt-3 text-sm leading-7 text-muted">
+                      {step.body}
+                    </p>
+                  </li>
+                ))}
+              </ol>
+            </div>
           ))}
-        </ol>
+        </div>
       </div>
     </section>
   );

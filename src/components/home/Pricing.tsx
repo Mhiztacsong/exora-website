@@ -1,3 +1,4 @@
+
 import { Price } from "@/components/Price";
 import { services } from "@/lib/site";
 
@@ -20,9 +21,10 @@ export function Pricing() {
             Straightforward fees.
           </h2>
           <p className="mt-5 text-base leading-8 text-muted">
-            Both services are priced at <Price amount="10,000" />. Execute is
-            a single 30-day fee. Visibility & Content is billed each month,
-            per platform.
+            Both services have a founding offer of <Price amount="10,000" />,
+            with different terms. Execute is a one-time fee for 30 days.
+            Visibility & Content is a monthly fee for one social media
+            platform, at the founding-client rate for the first five clients.
           </p>
         </div>
 
@@ -53,8 +55,12 @@ export function Pricing() {
                 <td className="px-8 py-6 text-sm">
                   <Price amount="10,000" /> per person
                 </td>
-                <td className="px-8 py-6 text-sm">30 days</td>
-                <td className="px-8 py-6 text-sm">Five places</td>
+                <td className="px-8 py-6 text-sm">
+                  30 days, one-time fee
+                </td>
+                <td className="px-8 py-6 text-sm">
+                  The Founding Five · five places
+                </td>
               </tr>
               <tr>
                 <th scope="row" className="px-8 py-6 font-serif text-2xl">
@@ -64,7 +70,9 @@ export function Pricing() {
                   <Price amount="10,000" /> per platform / month
                 </td>
                 <td className="px-8 py-6 text-sm">Monthly</td>
-                <td className="px-8 py-6 text-sm">Open by enquiry</td>
+                <td className="px-8 py-6 text-sm">
+                  Founding-client rate · first five clients
+                </td>
               </tr>
             </tbody>
           </table>
@@ -81,6 +89,13 @@ export function Pricing() {
             ))}
           </div>
         </div>
+
+        <p className="mt-6 text-sm leading-7 text-muted">
+          The Execute fee includes a copy of Just Execute. The Visibility &
+          Content package includes 27 written posts per month, with six
+          carousel designs included within those 27 posts. Scheduling and
+          publishing are not included.
+        </p>
       </div>
     </section>
   );

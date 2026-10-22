@@ -22,17 +22,16 @@ export function Hero() {
             </span>
           </h1>
           <p className="mt-7 max-w-xl text-base leading-8 text-muted sm:text-lg">
-            EXORA is built for people who need a short, structured way to
-            execute a measurable goal — and for professionals, creators, and
-            small businesses who need a month of content, planned and written,
-            without handing over publishing.
+            EXORA helps you make progress on a specific goal through a
+            focused 30-day, one-on-one programme, or communicate your value
+            through strategic monthly content for your brand or business.
           </p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <a
               href="#services"
               className="inline-flex items-center justify-center rounded-full bg-pine px-6 py-3.5 text-sm font-medium text-white transition-colors hover:bg-pine-dark"
             >
-              See the services
+              Explore the services
             </a>
             <a
               href="#pricing"
@@ -53,7 +52,7 @@ export function Hero() {
                 <Price amount="10,000" />
               </dt>
               <dd className="mt-1 text-sm leading-6 text-muted">
-                Execute, per person · 30 days
+                EXORA Execute · one-time fee for 30 days
               </dd>
             </div>
             <div className="border-b border-border pb-5">
@@ -61,13 +60,13 @@ export function Hero() {
                 <Price amount="10,000" />
               </dt>
               <dd className="mt-1 text-sm leading-6 text-muted">
-                Visibility & Content, per platform / month
+                Visibility & Content · per platform, per month
               </dd>
             </div>
             <div>
               <dt className="font-serif text-2xl text-foreground">Five</dt>
               <dd className="mt-1 text-sm leading-6 text-muted">
-                Execute places available
+                Founding places for EXORA Execute
               </dd>
             </div>
           </dl>

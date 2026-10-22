@@ -12,23 +12,28 @@ export const navLinks = [
   { href: "#enquire", label: "Enquire" },
 ] as const;
 
+
 export const services = [
   {
     id: "execute",
     name: "EXORA Execute",
     eyebrow: "30 days · one to one",
     summary:
-      "A focused programme for people who already know what they want to achieve, and need structured help turning that goal into daily action.",
+      "A 30-day one-on-one programme that helps you turn one specific goal into a practical plan, take consistent action, and track measurable progress.",
     price: "10,000",
-    priceNote: "per person",
-    constraint: "Five places only",
-    audience: "For individuals with a measurable goal and a 30-day window.",
+    priceNote: "per person · 30 days",
+    constraint: "The Founding Five · five places",
+    audience:
+      "For people with a clear goal they can break into actions and measure within 30 days.",
     deliverables: [
-      "Goal mapping",
-      "Execution planning",
-      "Check-ins",
-      "Progress tracking",
-      "Final review",
+      "Personal goal mapping session",
+      "Personalised 30-day execution plan",
+      "Two scheduled one-on-one check-ins each week",
+      "Daily action tracker",
+      "Weekly progress reports",
+      "Accountability and problem-solving support",
+      "A copy of Just Execute",
+      "Final progress review",
     ],
     exclusions: [] as string[],
   },
@@ -37,42 +42,92 @@ export const services = [
     name: "EXORA Visibility & Content",
     eyebrow: "Monthly · per platform",
     summary:
-      "Content support for professionals, creators, and small businesses who need a consistent presence without handing over publishing.",
+      "Strategic content support that helps professionals, creators, and small businesses communicate their value clearly and consistently on one social media platform.",
     price: "10,000",
     priceNote: "per platform / month",
-    constraint: "Billed monthly, one platform at a time",
-    audience: "For people and businesses who already have a channel to fill.",
+    constraint: "Founding-client rate · first five clients",
+    audience:
+      "For people and businesses that want purposeful content without handing over publishing.",
     deliverables: [
-      "27 written posts",
-      "Six carousel designs",
-      "Content strategy",
-      "Content calendar",
-      "Profile optimization",
-      "Performance review",
+      "27 written posts per month",
+      "Six carousel designs included within the 27 posts",
+      "Content strategy tailored to your goals",
+      "Monthly content calendar",
+      "Initial profile optimisation",
+      "Monthly performance review",
     ],
-    exclusions: ["scheduling", "publishing"],
+    exclusions: [
+      "Scheduling and publishing",
+      "Additional social media platforms",
+      "Video editing and extra graphic designs",
+      "Community management and broader social media management",
+    ],
   },
 ] as const;
 
-export const processSteps = [
+export const processGroups = [
   {
-    number: "01",
-    title: "Choose the work",
-    body: "Select Execute if you need a 30-day plan around one goal. Select Visibility & Content if you need a month of posts, carousels, and structure for a single platform.",
-  },
-  {
-    number: "02",
-    title: "Set the brief",
-    body: "Share the goal you intend to complete, or the platform you need filled. The work stays within that brief so the deliverables stay specific.",
-  },
-  {
-    number: "03",
-    title: "Work the cadence",
-    body: "Execute is built around mapping, planning, check-ins, and tracking. Visibility & Content is built around strategy, a calendar, written posts, and carousel designs.",
-  },
-  {
-    number: "04",
-    title: "Close with a review",
-    body: "Both services end with a review of what was produced and what moved. From there, you decide whether to continue, pause, or stop.",
-  },
+      title: "EXORA Execute",
+      description:
+        "A guided 30-day process to help you turn one specific goal into action and track your progress.",
+      steps: [
+        {
+          number: "01",
+          title: "Apply",
+          body: "Share the specific goal you want to work towards during the 30-day programme.",
+        },
+        {
+          number: "02",
+          title: "Confirm the fit",
+          body: "Discuss your goal and confirm that it is suitable for the programme.",
+        },
+        {
+          number: "03",
+          title: "Map your goal",
+          body: "Work together to create a personalised 30-day execution plan with clear actions.",
+        },
+        {
+          number: "04",
+          title: "Take action and track progress",
+          body: "Use your daily action tracker, weekly progress reports, and two scheduled one-on-one check-ins each week to stay accountable.",
+        },
+        {
+          number: "05",
+          title: "Review your progress",
+          body: "Look at what you achieved, what challenged you, and what your next steps should be.",
+        },
+      ],
+    },
+    {
+      title: "EXORA Visibility & Content",
+      description:
+        "A monthly content process that gives your brand direction, purposeful content, and a way to review performance.",
+      steps: [
+        {
+          number: "01",
+          title: "Tell us about your brand",
+          body: "Share your business or personal brand, audience, goals, and chosen social media platform.",
+        },
+        {
+          number: "02",
+          title: "Set the direction",
+          body: "Develop a content strategy and monthly calendar around your goals.",
+        },
+        {
+          number: "03",
+          title: "Prepare your content",
+          body: "Receive 27 written posts per month, including six carousel designs, prepared for your chosen platform.",
+        },
+        {
+          number: "04",
+          title: "Review and refine",
+          body: "Review the content and provide feedback so the work can be refined before it is finalised.",
+        },
+        {
+          number: "05",
+          title: "Learn and improve",
+          body: "Review monthly performance to understand what worked and inform future content decisions.",
+        },
+      ],
+    },
 ] as const;
