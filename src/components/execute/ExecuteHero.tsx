@@ -39,7 +39,7 @@ export function ExecuteHero() {
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <a
-                href="#apply"
+                href="/execute/apply"
                 className="inline-flex items-center justify-center rounded-full bg-pine px-6 py-3.5 text-sm font-medium text-white transition-colors hover:bg-pine-dark"
               >
                 Apply for the Founding Five
