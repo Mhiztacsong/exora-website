@@ -8,6 +8,7 @@ import { ProgrammeDetails } from "@/components/execute/application/ProgrammeDeta
 import { ApplicationConsent } from "@/components/execute/application/ApplicationConsent";
 import { BankTransferDetails } from "@/components/execute/application/BankTransferDetails";
 import { PaymentConfirmation } from "@/components/execute/application/PaymentConfirmation";
+import Image from "next/image";
 
 export function ApplicationPage() {
   const [status, setStatus] = useState("");
@@ -81,9 +82,13 @@ export function ApplicationPage() {
           aria-hidden="true"
           className="pointer-events-none absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 opacity-[0.06] sm:left-auto sm:right-0 sm:h-96 sm:w-96 sm:translate-x-0 sm:opacity-[0.10]"
         >
-          <img
-            src="/images/exora-botanical.png"
-            alt=""
+          <Image
+            src="/images/exora-botanical.webp"
+            alt="EXORA Botanical Decoration"
+            width={600}
+            height={600}
+            sizes="(max-width: 639px) 256px, 384px"
+            loading="eager"
             className="h-full w-full object-contain"
           />
         </div>
