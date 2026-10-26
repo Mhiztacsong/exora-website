@@ -78,10 +78,10 @@ export function VisibilityApplicationPage() {
           className="paper-grid pointer-events-none absolute inset-0 opacity-10"
         />
 
-         {/* Botanical decoration on the right */}
+         {/* Botanical decoration */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -right-20 top-1/2 h-80 w-80 -translate-y-1/2 opacity-50 sm:right-0 sm:h-96 sm:w-96"
+          className="pointer-events-none absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 opacity-[0.06] sm:left-auto sm:right-0 sm:h-96 sm:w-96 sm:translate-x-0 sm:opacity-[0.10]"
         >
           <img
             src="/images/exora-botanical.png"
