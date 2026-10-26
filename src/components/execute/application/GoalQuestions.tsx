@@ -1,9 +1,9 @@
 export function GoalQuestions() {
   return (
-    <fieldset className="mt-12 space-y-6 border-t border-border pt-10">
-      <legend className="font-serif text-2xl text-foreground">
+    <fieldset className="mt-8 space-y-4 border-t border-border pt-10">
+      <h2 className="font-serif text-2xl text-foreground">
         Let’s talk about your goal
-      </legend>
+      </h2>
 
       <p className="text-sm leading-6 text-muted">
         EXORA Execute is built around one specific goal. Tell us what you

@@ -29,7 +29,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border/80 bg-background/90 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:h-[4.5rem] sm:px-8">
         <a
-          href="#top"
+          href="/#top"
           className="font-serif text-xl tracking-[0.18em] text-foreground sm:text-[1.35rem]"
         >
           {site.name}
@@ -51,7 +51,7 @@ export function SiteHeader() {
         </nav>
 
         <a
-          href="#enquire"
+          href="/#enquire"
           className="hidden rounded-full bg-pine px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-pine-dark md:inline-flex"
         >
           Request a place
@@ -96,7 +96,7 @@ export function SiteHeader() {
             </a>
           ))}
           <a
-            href="#enquire"
+            href="/#enquire"
             className="mt-4 inline-flex items-center justify-center rounded-full bg-pine px-4 py-3 text-sm font-medium text-white"
             onClick={() => setOpen(false)}
           >

@@ -4,6 +4,7 @@ import { ExecuteAudience} from "@/components/execute/ExecuteAudience";
 import { ExecuteReceive } from "@/components/execute/ExecuteReceive";
 import { ExecuteProcess } from "@/components/execute/ExecuteProcess";
 import { ExecuteApproach } from "@/components/execute/ExecuteApproach";
+import { ExecuteFAQs } from "@/components/execute/ExecuteFAQs";
 
 export default function ExecutePage() {
   return (
@@ -14,6 +15,7 @@ export default function ExecutePage() {
       <ExecuteReceive />
       <ExecuteProcess />
       <ExecuteApproach />  
+      <ExecuteFAQs />
     </main>
   );
 }

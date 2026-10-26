@@ -6,10 +6,10 @@ export const site = {
 };
 
 export const navLinks = [
-  { href: "#services", label: "Services" },
-  { href: "#how-it-works", label: "How it works" },
-  { href: "#pricing", label: "Pricing" },
-  { href: "#enquire", label: "Enquire" },
+  { href: "/#services", label: "Services" },
+  { href: "/#how-it-works", label: "How it works" },
+  { href: "/#pricing", label: "Pricing" },
+  { href: "/#enquire", label: "Enquire" },
 ] as const;
 
 

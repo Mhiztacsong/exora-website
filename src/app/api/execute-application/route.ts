@@ -7,10 +7,10 @@ export async function POST(request: Request) {
     const recipientEmail = process.env.EXORA_APPLICATION_EMAIL;
 
     if (!apiKey || !recipientEmail) {
-        return NextResponse.json(
-            { error: "Email service is not configured correctly." },
-            { status: 500 }
-        );
+      return NextResponse.json(
+        { error: "Email service is not configured correctly." },
+        { status: 500 }
+      );
     }
 
     const formData = await request.json();
@@ -44,7 +44,10 @@ export async function POST(request: Request) {
       formData.confirmInformation !== true
     ) {
       return NextResponse.json(
-        { error: "Please confirm your payment and application consent." },
+        {
+          error:
+            "Please confirm your payment and application consent.",
+        },
         { status: 400 }
       );
     }
@@ -54,38 +57,38 @@ export async function POST(request: Request) {
     const applicantEmail = String(formData.email).trim();
     const applicantName = String(formData.fullName).trim();
 
+    const emailText = `A new EXORA Execute application has been submitted.
+
+APPLICANT DETAILS
+Name: ${applicantName}
+Email: ${applicantEmail}
+WhatsApp: ${formData.whatsapp || "Not provided"}
+
+GOAL AND MOTIVATION
+Goal: ${formData.goal}
+Why now: ${formData.whyNow}
+Obstacles: ${formData.obstacles}
+Definition of success: ${formData.success}
+
+COMMITMENT
+Accountability expectations: ${formData.accountability}
+Readiness: ${formData.commitment}
+Additional information: ${formData.additionalInfo || "None provided"}
+
+PAYMENT
+Transfer reference: ${formData.paymentReference}
+Applicant says payment was made: Yes — verify independently.
+
+CONSENT
+Applicant confirmed their information and consented to its use for processing the application.
+
+IMPORTANT: This application does not prove payment. Check the receiving bank account before confirming the applicant's place.`;
+
     const emailResult = await resend.emails.send({
       from: "EXORA Execute <onboarding@resend.dev>",
       to: [recipientEmail],
       subject: `New EXORA Execute application — ${applicantName}`,
-      text: `
-            A new EXORA Execute application has been submitted.
-
-            APPLICANT DETAILS
-            Name: ${applicantName}
-            Email: ${applicantEmail}
-            WhatsApp: ${formData.whatsapp || "Not provided"}
-
-            GOAL AND MOTIVATION
-            Goal: ${formData.goal}
-            Why now: ${formData.whyNow}
-            Obstacles: ${formData.obstacles}
-            Definition of success: ${formData.success}
-
-            COMMITMENT
-            Accountability expectations: ${formData.accountability}
-            Readiness: ${formData.commitment}
-            Additional information: ${formData.additionalInfo || "None provided"}
-
-            PAYMENT
-            Transfer reference: ${formData.paymentReference}
-            Applicant says payment was made: Yes — verify independently.
-
-            CONSENT
-            Applicant confirmed their information and consented to its use for processing the application.
-
-            IMPORTANT: This application does not prove payment. Check the receiving bank account before confirming the applicant's place.
-      `,
+      text: emailText,
       replyTo: applicantEmail,
     });
 
@@ -93,7 +96,10 @@ export async function POST(request: Request) {
       console.error("Resend error:", emailResult.error);
 
       return NextResponse.json(
-        { error: "We could not send your application. Please try again." },
+        {
+          error:
+            "We could not send your application. Please try again.",
+        },
         { status: 502 }
       );
     }

@@ -1,10 +1,10 @@
 
 export function CommitmentQuestions() {
   return (
-    <fieldset className="mt-12 space-y-6 border-t border-border pt-10">
-      <legend className="font-serif text-2xl text-foreground">
+    <fieldset className="mt-8 space-y-4 border-t border-border pt-10">
+      <h2 className="font-serif text-2xl text-foreground">
         Are you ready to commit?
-      </legend>
+      </h2>
 
       <p className="text-sm leading-6 text-muted">
         The programme involves taking action, tracking your progress, and
